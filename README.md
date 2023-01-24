@@ -108,4 +108,27 @@ BN {
   words: [ 9999, <1 empty item> ],
   length: 1,
   red: null
-}```
+}
+```
+
+# JSON-RPC
+## web3_clientVersion
+Request
+```json
+curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:7545
+```
+Result
+```json
+{"id":67,"jsonrpc":"2.0","result":"EthereumJS TestRPC/v2.13.1/ethereum-js"}
+```
+
+## balance
+Request
+```json
+curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x5cb4F50c1672432a5a8ee9A3eb6086AcbC74625a", "latest"],"id":1}' 127.0.0.1:7545
+```
+Result(wei)
+```json
+{"id":1,"jsonrpc":"2.0","result":"0x56b9afdbbc973a800"}
+```
+
