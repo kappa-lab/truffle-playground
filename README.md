@@ -114,7 +114,7 @@ BN {
 # JSON-RPC
 ## web3_clientVersion
 Request
-```json
+```curl
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:7545
 ```
 Result
@@ -124,7 +124,7 @@ Result
 
 ## balance
 Request
-```json
+```curl
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x5cb4F50c1672432a5a8ee9A3eb6086AcbC74625a", "latest"],"id":1}' 127.0.0.1:7545
 ```
 Result(wei)
